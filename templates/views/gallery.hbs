@@ -17,14 +17,13 @@
         </a>
        {{/if}} -->
  			<div class="col-sm-4 col-md-4 gallery-image">
-          <a class="lightgallery" title="{{name}}" rel="gl_{{key}}" data-src="{{images.1.href}}" data-exthumbimage="{{images.1.href}}">
-          	<img class="item" src="{{images.1.href}}" alt="{{name}}" />
-          </a>
+ 				{{#if image}}
+        <a class="lightgallery" title="{{name}}" rel="gl_{{key}}" data-src="{{image.href}}" data-exthumbimage="{{image.href}}">
+        	<img class="item" src="{{image.href}}" alt="{{name}}" />
+        </a>
+        {{/if}}
 				{{#each images}}
 					<div data-exthumbimage="{{href}}" data-src="{{href}}" class="item"></div>
-<!-- 					<a class="item" href="{{href}}" rel="gl_{{../key}}" title="{{originalname}}">
-				 	<img src="{{href}}" alt="{{name}}" />
-				</a> -->
 				{{/each}}
 			</div>
 		</div>
