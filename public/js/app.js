@@ -21,4 +21,9 @@
     showThumbByDefault: true,
     exThumbImage: 'data-exthumbimage'
   });
+
+  $('#videoliste').lightGallery({
+        videoAutoplay: true,
+        exThumbImage: 'data-exthumbimage',
+    });
 }(jQuery));
