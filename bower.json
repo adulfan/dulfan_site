@@ -1,0 +1,11 @@
+{
+  "name": "keystone-demo",
+  "description": "",
+  "main": "keystone.js",
+  "authors": [
+    "adulfan <Anna.Dulfan@ey.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": ""
+}

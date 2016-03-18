@@ -1,0 +1,36 @@
+<div class="container">
+	<h1>Gallery</h1>
+</div>
+<div class="container">
+	<!-- if galleries -->
+	{{#if galleries}}
+		{{#each galleries}}
+		<h2>{{name}}
+			<div class="pull-right text-muted">19th May 2014</div>
+		</h2>
+		<h3>{{description}}</h3>
+		<div class="row gallery-images">
+<!-- 			{{#if image}}
+			<div class="col-sm-4 col-md-4 gallery-image">
+        <a class="lightgallery" title="{{name}}" rel="gl_{{key}}" href="{{images.1.href}}">
+        	<img class="item" src="{{images.1.href}}" alt="{{name}}" />
+        </a>
+       {{/if}} -->
+   			<div class="col-sm-4 col-md-4 gallery-image">
+          <a class="lightgallery" title="{{name}}" rel="gl_{{key}}" href="{{images.1.href}}">
+          	<img class="item" src="{{images.1.href}}" alt="{{name}}" />
+          </a>
+				{{#each images}}
+					<div data-exthumbimage="{{href}}" data-src="{{href}}" class="item"></div>
+<!-- 					<a class="item" href="{{href}}" rel="gl_{{../key}}" title="{{originalname}}">
+				 	<img src="{{href}}" alt="{{name}}" />
+				</a> -->
+				{{/each}}
+			</div>
+		</div>
+		{{/each}}
+	{{else}}
+	<!-- else -->
+	<h3 class="text-muted">There are no image galleries yet.</h3>
+	{{/if}}
+</div>
