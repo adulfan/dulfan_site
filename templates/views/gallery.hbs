@@ -2,34 +2,30 @@
 	<h1>Gallery</h1>
 </div>
 <div class="container">
+	<div class="row gallery-images">
 	<!-- if galleries -->
 	{{#if galleries}}
 		{{#each galleries}}
-		<h2>{{name}}
-			<div class="pull-right text-muted">19th May 2014</div>
-		</h2>
-		<h3>{{description}}</h3>
-		<div class="row gallery-images">
-<!-- 			{{#if image}}
-			<div class="col-sm-4 col-md-4 gallery-image">
-        <a class="lightgallery" title="{{name}}" rel="gl_{{key}}" href="{{images.1.href}}">
-        	<img class="item" src="{{images.1.href}}" alt="{{name}}" />
-        </a>
-       {{/if}} -->
- 			<div class="col-sm-4 col-md-4 gallery-image">
- 				{{#if image}}
-        <a class="lightgallery" title="{{name}}" rel="gl_{{key}}" data-src="{{image.href}}" data-exthumbimage="{{image.href}}">
-        	<img class="item" src="{{image.href}}" alt="{{name}}" />
-        </a>
-        {{/if}}
+			<div class="col-sm-4 col-md-4">
+				<h2>{{name}}
+					<div class="pull-right text-muted">19th May 2014</div>
+				</h2>
+				<h3>{{description}}</h3>
+				<div class=" gallery-image">
+				{{#if image}}
+				<a class="lightgallery" title="{{name}}" rel="gl_{{key}}" data-src="{{image.href}}" data-exthumbimage="{{image.href}}">
+					<img class="item" src="{{image.href}}" alt="{{name}}" />
+				</a>
+				{{/if}}
 				{{#each images}}
 					<div data-exthumbimage="{{href}}" data-src="{{href}}" class="item"></div>
 				{{/each}}
+				</div>
 			</div>
-		</div>
 		{{/each}}
 	{{else}}
 	<!-- else -->
 	<h3 class="text-muted">There are no image galleries yet.</h3>
 	{{/if}}
+	</div>
 </div>
