@@ -1,25 +1,24 @@
 <div class="container">
-	<h1>Gallery</h1>
-</div>
-<div class="container">
 	<div class="row gallery-images">
 	<!-- if galleries -->
 	{{#if galleries}}
 		{{#each galleries}}
-			<div class="col-sm-4 col-md-4">
-				<h2>{{name}}
-					<div class="pull-right text-muted">19th May 2014</div>
-				</h2>
-				<h3>{{description}}</h3>
-				<div class=" gallery-image">
-				{{#if image}}
-				<a class="lightgallery" title="{{name}}" rel="gl_{{key}}" data-src="{{image.href}}" data-exthumbimage="{{image.href}}">
-					<img class="item" src="{{image.href}}" alt="{{name}}" />
-				</a>
-				{{/if}}
-				{{#each images}}
-					<div data-exthumbimage="{{href}}" data-src="{{href}}" class="item"></div>
-				{{/each}}
+			<div class="col-sm-2 col-md-2">
+				<div class="row-eq-height">
+					<div class="desc-wrapper">
+						<h2>{{name}}</h2>
+						<h3>{{description}}</h3>
+					</div>
+					<div class=" gallery-image">
+					{{#if image}}
+					<a class="lightgallery" title="{{name}}" rel="gl_{{key}}" data-src="{{image.href}}" data-exthumbimage="{{image.href}}">
+						<img class="item" src="{{image.href}}" alt="{{name}}" />
+					</a>
+					{{/if}}
+					{{#each images}}
+						<div data-exthumbimage="{{href}}" data-src="{{href}}" class="item"></div>
+					{{/each}}
+					</div>
 				</div>
 			</div>
 		{{/each}}

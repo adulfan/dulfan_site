@@ -7,5 +7,8 @@
   ],
   "license": "MIT",
   "moduleType": [],
-  "homepage": ""
+  "homepage": "",
+  "dependencies": {
+    "components-font-awesome": "^4.5.0"
+  }
 }

@@ -6,23 +6,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Keystone Demo</title>
 		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-		<link href="/styles/site.css" rel="stylesheet">
-		<!--Add gallerylight-->
-		<link rel="stylesheet" href="/bower/lightgallery/dist/css/lightgallery.css" type="text/css" media="screen" />
-		<!-- Add fancyBox -->
-		<link rel="stylesheet" href="/js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-		<link rel="stylesheet" href="/js/fancybox/helpers/jquery.fancybox-thumbs.css?v=2.1.5" type="text/css" media="screen" />
-
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
 		{{{isAdminEditorCSS user}}}
-
+		<!--Add gallerylight-->
+		<link rel="stylesheet" href="/bower/lightgallery/dist/css/lightgallery.css" type="text/css" media="screen" />
+		<!-- Add fancyBox -->
+		<link rel="stylesheet" href="bower/components-font-awesome/css/font-awesome.min.css">
 		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
 		//- Safely remove this block if you are not targeting IE8 --}}
 		<!--[if lt IE 9]>
 			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
 			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
+		<link href="/styles/site.css" rel="stylesheet">
 	</head>
 	<body>
 		<div id="header">
