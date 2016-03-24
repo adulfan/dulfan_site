@@ -5,20 +5,24 @@
 		{{#each galleries}}
 			<div class="col-sm-2 col-md-2">
 				<div class="row-eq-height">
-					<div class="desc-wrapper">
-						<h2>{{name}}</h2>
-						<h3>{{description}}</h3>
-					</div>
-					<div class=" gallery-image">
+					<div class="gallery-image">
+
 					{{#if image}}
 					<a class="lightgallery" title="{{name}}" rel="gl_{{key}}" data-src="{{image.href}}" data-exthumbimage="{{image.href}}">
 						<img class="item" src="{{image.href}}" alt="{{name}}" />
+						<div class="desc-wrapper">
+							<div class="titles">
+								<h2>{{name}}</h2>
+								<h3>{{description}}</h3>
+							</div>
+						</div>
 					</a>
 					{{/if}}
 					{{#each images}}
 						<div data-exthumbimage="{{href}}" data-src="{{href}}" class="item"></div>
 					{{/each}}
 					</div>
+
 				</div>
 			</div>
 		{{/each}}
